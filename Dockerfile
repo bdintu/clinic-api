@@ -6,6 +6,7 @@ RUN apk update \
     && apk add --no-cache sqlite \ 
     && pip install --no-cache-dir -r requirements.txt \
     && cat clinic.sql | sqlite3 clinic.db \
+    && chmod -x * \
     && rm -rf /var/cache/apk/*
 CMD ["python", "app.py"]
 EXPOSE 5000

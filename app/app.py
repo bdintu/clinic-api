@@ -15,4 +15,4 @@ api.add_resource(Dispense, '/dispense', '/dispense/<int:treatment_id>')
 api.add_resource(Receipt, '/receipt', '/receipt/<int:receipt_id>')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', debug=False)

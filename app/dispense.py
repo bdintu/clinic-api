@@ -1,6 +1,5 @@
 from flask import abort, request
 from flask_restful import Resource
-import requests
 
 from engine import engine, text, dump
 

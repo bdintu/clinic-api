@@ -1,6 +1,6 @@
 from flask import abort, request
 from flask_restful import Resource
-import requests
+from urllib.request import urlopen
 
 from engine import engine, text, dump
 
@@ -20,7 +20,8 @@ class Patient(Resource):
         return dump(res)
 
     def post(self):
-        data = requests.get('http://ce.kmitl.ac.th/api')
+        endpoint = 'http://ce.kmitl.ac.th/api'
+        data = urlopen(endpoint).read()
 
         engine().execute(self.ins, {**request.get_json(), **data})
         return {}, 204
