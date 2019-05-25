@@ -11,17 +11,17 @@ class Patient(Resource):
         self.sel_con = text('select * from RECEIPT where ID = :people_id')
         self.ins = text('insert into PATIENT (PEOPLE_ID, GENDER, BLOOD_ID , CLASH, BIRTHDATE) values (:people_id, :gender, :blood_id, :clash, :birthdate)')
 
-    def get(self, receipt_id=None):
+    def get(self, people_id=None):
         if receipt_id:
-            res = engine().execute(self.sel_con, {'receipt_id': receipt_id})
+            res = engine().execute(self.sel_con, {'people_id': people_id})
         else:
             res = engine().execute(self.sel)
 
         return dump(res)
 
     def post(self):
-        endpoint = 'http://ce.kmitl.ac.th/api'
-        data = urlopen(endpoint).read()
-
-        engine().execute(self.ins, {**request.get_json(), **data})
+#        endpoint = 'http://ce.kmitl.ac.th/api'
+#        data = urlopen(endpoint).read()
+#        engine().execute(self.ins, {**request.get_json(), **data})
+        engine().execute(self.ins, **request.get_json())
         return {}, 204

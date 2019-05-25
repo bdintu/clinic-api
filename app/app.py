@@ -22,4 +22,4 @@ api.add_resource(Treatment, '/treatment', '/treatment/<int:treatment_id>')
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=False)
+    app.run(host='0.0.0.0', debug=True)

@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "a76fef67-3e80-46ea-8ae3-550ec0c61cc4",
+		"name": "Clinic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Insert Patient",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"people_id\": 1,\n    \"gender\": 1,\n    \"blood_id\": 1,\n    \"clash\": \"\",\n    \"birthdate\": \"1998-03-21\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/patient",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pay",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pay\": 1\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/receipt/pay/1289160000000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"receipt",
+						"pay",
+						"1289160000000"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

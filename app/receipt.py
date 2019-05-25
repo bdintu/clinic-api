@@ -24,7 +24,7 @@ class Receipt(Resource):
 
 class ReceiptPay(Resource):
     def __init__(self):
-        self.pay = 'update RECEIPT set IS_PAY = 1 where TREATMENT_ID = :treatment_id'
+        self.pay = 'update RECEIPT set IS_PAY = :pay where TREATMENT_ID = :treatment_id'
 
     def put(self, treatment_id):
         engine().execute(self.pay, {**request.get_json(), 'treatment_id': treatment_id})
