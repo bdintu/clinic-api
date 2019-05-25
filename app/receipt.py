@@ -17,10 +17,7 @@ class Receipt(Resource):
         else:
             res = engine().execute(self.sel)
 
-        if res:
-            return dump(res)
-        else:
-            abort(404)
+        return dump(res)
 
     def post(self):
         engine().execute(self.ins, **request.get_json())
