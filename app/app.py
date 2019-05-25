@@ -5,7 +5,7 @@ from owe import Owe
 from patient import Patient
 from doctor import Doctor
 from dispense import Dispense
-from receipt import Receipt
+from receipt import Receipt, ReceiptPay
 from treatment import Treatment
 
 
@@ -16,7 +16,8 @@ api.add_resource(Owe, '/owe', '/owe/<int:people_id>')
 api.add_resource(Patient, '/patient', '/patient/<int:people_id>')
 api.add_resource(Doctor, '/doctor', '/doctor/<int:doctor_id>')
 api.add_resource(Dispense, '/dispense', '/dispense/<int:treatment_id>')
-api.add_resource(Receipt, '/receipt', '/receipt/<int:receipt_id>')
+api.add_resource(Receipt, '/receipt', '/receipt/<int:treatment_id>')
+api.add_resource(ReceiptPay, '/receipt/pay/<int:treatment_id>')
 api.add_resource(Treatment, '/treatment', '/treatment/<int:treatment_id>')
 
 
