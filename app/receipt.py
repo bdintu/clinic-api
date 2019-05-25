@@ -7,8 +7,8 @@ class Receipt(Resource):
     def __init__(self):
         self.sel = text('select * from RECEIPT')
         self.sel_con = text('select * from RECEIPT where ID = :receipt_id')
-        self.ins = text('insert into RECEIPT (PATIENT_ID, PRICE) values (:PATIENT_ID, :PRICE)')
-        self.up = 'update RECEIPT set PATIENT_ID = :PATIENT_ID, PRICE = :PRICE where ID = :receipt_id'
+        self.ins = text('insert into RECEIPT (PATIENT_ID, PRICE) values (:patient_id, :price)')
+        self.up = 'update RECEIPT set PATIENT_ID = :patient_id, PRICE = :price where ID = :receipt_id'
         self.dele = text('delete from RECEIPT where id = :receipt_id')
 
     def get(self, receipt_id=None):
