@@ -18,7 +18,7 @@ api.add_resource(Doctor, '/doctor', '/doctor/<int:doctor_id>')
 api.add_resource(Dispense, '/dispense', '/dispense/<int:treatment_id>')
 api.add_resource(Receipt, '/receipt', '/receipt/<int:treatment_id>')
 api.add_resource(ReceiptPay, '/receipt/pay/<int:treatment_id>')
-api.add_resource(Treatment, '/treatment', '/treatment/<int:treatment_id>')
+api.add_resource(Treatment, '/treatment', '/treatment/<int:treatment_id>', '/treatment/people/<int:people_id>')
 
 
 if __name__ == '__main__':

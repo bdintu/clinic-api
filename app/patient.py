@@ -12,14 +12,14 @@ class Patient(Resource):
         self.ins = text('insert into PATIENT (PEOPLE_ID, GENDER, BLOOD_ID , CLASH, BIRTHDATE) values (:people_id, :gender, :blood_id, :clash, :birthdate)')
 
     def get(self, people_id=None):
-        if receipt_id:
+        if people_id:
             res = engine().execute(self.sel_con, {'people_id': people_id})
         else:
             res = engine().execute(self.sel)
 
         return dump(res)
 
-    def post(self):
+    def post(self, ):
 #        endpoint = 'http://ce.kmitl.ac.th/api'
 #        data = urlopen(endpoint).read()
 #        engine().execute(self.ins, {**request.get_json(), **data})
