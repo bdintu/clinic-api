@@ -22,15 +22,14 @@
 					"raw": "{\n    \"people_id\": 1,\n    \"gender\": 1,\n    \"blood_id\": 1,\n    \"clash\": \"\",\n    \"birthdate\": \"1998-03-21\"\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/patient",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/patient",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"patient"
 					]
@@ -55,16 +54,16 @@
 					"raw": "{\n    \"pay\": 1\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/receipt/pay/1289160000000",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life//receipt/pay/1289160000000",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
+						"",
 						"receipt",
 						"pay",
 						"1289160000000"
