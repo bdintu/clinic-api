@@ -22,15 +22,14 @@
 					"raw": "{\n    \"people_id\": 1,\n    \"gender\": 1,\n    \"blood_id\": 1,\n    \"clash\": \"\",\n    \"birthdate\": \"1998-03-21\"\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/patient",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/patient",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"patient"
 					]
@@ -44,15 +43,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/patient/1",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/patient/1",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"patient",
 						"1"
@@ -78,15 +76,14 @@
 					"raw": "{\n\t\"doctor_id\": 1,\n\t\"people_id\": 1,\n\t\"behaviour\": \"ggwp\",\n\t\"pressure_hight\": 120,\n\t\"pressure_low\": 80,\n\t\"hight\": 180,\n\t\"weight\": 70,\n\t\"treatment_date\": \"2019-05-26\"\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/treatment",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/treatment",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"treatment"
 					]
@@ -100,17 +97,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/treatment",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/treatment/51",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
-						"treatment"
+						"treatment",
+						"51"
 					]
 				}
 			},
@@ -130,18 +127,17 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"treatment_id\": 1,\n\t\"medicine_id\": 1,\n\t\"amount\": 4\n}"
+					"raw": "{\n\t\"treatment_id\": 51,\n\t\"medicine_id\": 1,\n\t\"amount\": 4\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/dispense",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/dispense",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"dispense"
 					]
@@ -155,15 +151,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/dispense/1",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/dispense/1",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"dispense",
 						"1"
@@ -186,18 +181,17 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"treatment_id\": 1\n}"
+					"raw": "{\n\t\"treatment_id\": 51\n}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/receipt",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/receipt",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"receipt"
 					]
@@ -211,18 +205,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/receipt/1",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/receipt/51",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"receipt",
-						"1"
+						"51"
 					]
 				}
 			},
@@ -245,15 +238,14 @@
 					"raw": "{}"
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5000/receipt/pay/1289160000000",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/receipt/pay/1289160000000",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"receipt",
 						"pay",
@@ -269,15 +261,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:5000/owe/1",
-					"protocol": "http",
+					"raw": "https://clinic.api.eiei.life/owe/1",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"clinic",
+						"api",
+						"eiei",
+						"life"
 					],
-					"port": "5000",
 					"path": [
 						"owe",
 						"1"
