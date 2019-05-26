@@ -1,12 +1,12 @@
 {
 	"info": {
-		"_postman_id": "a76fef67-3e80-46ea-8ae3-550ec0c61cc4",
+		"_postman_id": "504ecb97-d0f8-4ee5-b6d5-33efb175c13b",
 		"name": "Clinic",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Insert Patient",
+			"name": "Create Patient",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -22,7 +22,29 @@
 					"raw": "{\n    \"people_id\": 1,\n    \"gender\": 1,\n    \"blood_id\": 1,\n    \"clash\": \"\",\n    \"birthdate\": \"1998-03-21\"\n}"
 				},
 				"url": {
-					"raw": "https://clinic.api.eiei.life/patient",
+					"raw": "http://127.0.0.1:5000/patient",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Patient",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://clinic.api.eiei.life/patient/1",
 					"protocol": "https",
 					"host": [
 						"clinic",
@@ -31,7 +53,170 @@
 						"life"
 					],
 					"path": [
-						"patient"
+						"patient",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Treatment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"doctor_id\": 1,\n\t\"people_id\": 1,\n\t\"behaviour\": \"ggwp\",\n\t\"pressure_hight\": 120,\n\t\"pressure_low\": 80,\n\t\"hight\": 180,\n\t\"weight\": 70,\n\t\"treatment_date\": \"2019-05-26\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/treatment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"treatment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Treatment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://clinic.api.eiei.life/treatment",
+					"protocol": "https",
+					"host": [
+						"clinic",
+						"api",
+						"eiei",
+						"life"
+					],
+					"path": [
+						"treatment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Dispense",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"treatment_id\": 1,\n\t\"medicine_id\": 1,\n\t\"amount\": 4\n}"
+				},
+				"url": {
+					"raw": "https://clinic.api.eiei.life/dispense",
+					"protocol": "https",
+					"host": [
+						"clinic",
+						"api",
+						"eiei",
+						"life"
+					],
+					"path": [
+						"dispense"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Dispense",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://clinic.api.eiei.life/dispense/1",
+					"protocol": "https",
+					"host": [
+						"clinic",
+						"api",
+						"eiei",
+						"life"
+					],
+					"path": [
+						"dispense",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Receipt",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/javascript",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"treatment_id\": 63\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/receipt",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"receipt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Receipt",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://clinic.api.eiei.life/receipt",
+					"protocol": "https",
+					"host": [
+						"clinic",
+						"api",
+						"eiei",
+						"life"
+					],
+					"path": [
+						"receipt"
 					]
 				}
 			},
@@ -54,7 +239,7 @@
 					"raw": "{\n    \"pay\": 1\n}"
 				},
 				"url": {
-					"raw": "https://clinic.api.eiei.life//receipt/pay/1289160000000",
+					"raw": "https://clinic.api.eiei.life/receipt/pay/1289160000000",
 					"protocol": "https",
 					"host": [
 						"clinic",
@@ -63,10 +248,31 @@
 						"life"
 					],
 					"path": [
-						"",
 						"receipt",
 						"pay",
 						"1289160000000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Owe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://clinic.api.eiei.life/owe/1",
+					"protocol": "https",
+					"host": [
+						"clinic",
+						"api",
+						"eiei",
+						"life"
+					],
+					"path": [
+						"owe",
+						"1"
 					]
 				}
 			},
