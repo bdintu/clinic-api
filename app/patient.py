@@ -7,7 +7,7 @@ from engine import engine, text, dump
 
 class Patient(Resource):
     def __init__(self):
-        self.sel = text('select * from RATIENT')
+        self.sel = text('select * from PATIENT')
         self.sel_con = text('select * from PATIENT where PEOPLE_ID = :people_id')
         self.ins = text('insert into PATIENT (PEOPLE_ID, GENDER, BLOOD_ID , CLASH, BIRTHDATE) values (:people_id, :gender, :blood_id, :clash, :birthdate)')
 
